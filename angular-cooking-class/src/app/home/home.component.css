@@ -1,0 +1,44 @@
+.small-image {
+    width: 33.33%;
+  }
+  .new-recipe-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .search-recipe-button {
+    padding: 5px 10px;
+    background-color: #50603d;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size */
+    font-weight: bold; /* Added font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .item-wrapper {
+    background-color: rgba(255, 255, 255, 0.5); /* Change the opacity value as needed (0.0 to 1.0) */
+    border-radius: 10px; /* Adjust the border radius as desired */
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .search-recipe-labels {
+    color: #343434;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px; /* Increased font size */
+    font-weight: bold; /* Added font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}

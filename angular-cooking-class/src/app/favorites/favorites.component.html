@@ -1,0 +1,33 @@
+
+<li *ngFor="let recipeFavorite of recipeFavorite">
+  <div class="item-wrapper">
+    <div>
+          <!-- Display the recipe name -->
+        <h1>{{ recipeFavorite.name }}</h1>
+
+        <!-- Display the recipe thumbnail image -->
+        <img src="{{ recipeFavorite.thumbnailUrl }}" alt="{{ recipeFavorite.thumbnailAltText }}" class="small-image">
+
+        <!-- Display the recipe description -->
+        <h3>Description: {{ recipeFavorite.description }}</h3>
+
+        <!-- future add for list of instructions on favorites once added to database -->
+
+        <!-- <ul>
+          <li *ngFor="let instruction of result.instructions">
+            {{ instruction.display_text }}
+          </li>
+        </ul> -->
+
+        
+        <button (click)="DeleteFavorite(recipeFavorite)" class="search-recipe-button">
+          Delete from Favorites
+        </button>
+
+        <button (click)="navigateRecipeDetail(recipeFavorite.name!)" class="search-recipe-button">
+          View Full Details
+        </button>
+    </div>
+    
+  </div>
+</li>

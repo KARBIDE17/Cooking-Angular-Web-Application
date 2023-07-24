@@ -1,0 +1,49 @@
+
+
+<form (ngSubmit)="onSubmit(recipeForm)" #recipeForm="ngForm" class="new-recipe-form">
+
+  <!-- Form for searching recipes by name -->
+  <label for="recipeName" class="search-recipe-labels">Search by Recipe Name: </label>
+  <input type="text" id="recipeName" name="recipeName" ngModel required>
+  <button type="submit" class="search-recipe-button">Get Recipe</button>
+  <span class="nav-separator">         |         </span>
+
+  <!-- Form for searching recipes by ingredients -->
+  <label for="recipeName" class="search-recipe-labels">Search by Ingredients: </label>
+  <input type="text" id="recipeName" name="recipeName" ngModel required>
+  <button type="submit" class="search-recipe-button">Get Recipe</button>
+</form>
+
+
+<ul>
+
+  <!-- Loop over each result in the results array -->
+<li *ngFor="let result of results">
+    <div class="item-wrapper">
+      <div>
+          <p>Recipe ID: {{ result.id }}</p>
+            <!-- Display the recipe name -->
+          <h1>{{ result.name }}</h1>
+
+            <!-- Display the recipe thumbnail image -->
+          <img src="{{ result.thumbnail_url }}" alt="{{ result.thumbnail_alt_text }}" class="small-image">
+
+            <!-- Display the recipe description -->
+          <h3>Description: {{ result.description }}</h3>
+
+          <!-- Button to add the recipe to favorites -->
+          <button (click)="updateFavoriteStatus(result.id!, result.name!, result.description!, result.thumbnail_url!, result.thumbnail_alt_text!)" class="search-recipe-button">
+            Add to Favorites
+          </button>
+
+          <button (click)="navigateRecipeDetail(result.name!)" class="search-recipe-button">
+            View Full Details
+          </button>
+      </div>
+      
+    </div>
+  </li>
+</ul>
+
+<p></p>
+

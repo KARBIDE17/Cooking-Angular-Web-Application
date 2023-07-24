@@ -1,0 +1,62 @@
+
+<li *ngFor="let recipe of recipes">
+<div class="item-wrapper">
+    <div>
+        <p>Recipe ID: {{ recipe.id }}</p>
+          <!-- Display the recipe name -->
+            <h1>{{ recipe.name }}</h1>
+
+          <!-- Display the recipe thumbnail image -->
+            <img src="{{ recipe.thumbnail_url }}" alt="{{ recipe.thumbnail_alt_text }}" class="small-image">
+
+            <!-- Display the recipe video -->
+            <video src="{{ recipe.original_video_url }}" controls class="small-video">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Display the recipe description -->
+        <h3>Description: {{ recipe.description }}</h3>
+
+        <ul   >
+          <li *ngFor="let section of recipe.sections">
+                {{ section.name }}
+          
+            <ul>
+              <li *ngFor="let component of section.components">
+                {{ component.raw_text}}
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Display the recipe instructions as a list -->
+        <ul>
+          <!-- Loop over each instruction in the result's instructions array -->
+          <li *ngFor="let instruction of recipe.instructions">
+            {{ instruction.display_text }}
+          </li>
+        </ul>
+
+        <h4>{{recipe.yields}}</h4>
+<!-- Nutrition facts -->
+<h3>Nutrition Facts:</h3>
+
+
+        <p>Carbohydrates: {{ recipe.nutrition?.carbohydrates }}</p>
+        <p>Fiber: {{ recipe.nutrition?.fiber }}</p>
+        <p>Protein: {{ recipe.nutrition?.protein }}</p>
+        <p>Fat: {{ recipe.nutrition?.fat }}</p>
+        <p>Calories: {{ recipe.nutrition?.calories }}</p>
+        <p>Sugar: {{ recipe.nutrition?.sugar }}</p>
+
+
+
+        
+    </div>
+    <button (click)="updateFavoriteStatus(recipe.id!, recipe.name!, recipe.description!, recipe.thumbnail_url!, recipe.thumbnail_alt_text!)" class="search-recipe-button">
+        Add to Favorites
+      </button>
+
+
+  </div>
+</li>

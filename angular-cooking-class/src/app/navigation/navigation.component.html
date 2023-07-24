@@ -1,0 +1,19 @@
+<nav class="navigation-bar">
+    <!-- The Cooking App title image -->
+      <img src="assets\coollogo_com-475353.png" alt="Cooking App Title Image" class="cooking-app-title">
+
+      <!-- Navigation links -->
+      <a routerLink="/login" class="nav-link">Login</a>
+      <span class="nav-separator">|</span>
+
+      <a routerLink="/home" class="nav-link">Search</a>
+      <span class="nav-separator">|</span>
+
+      <a routerLink="/favorites" class="nav-link">Favorites</a>
+
+       
+  </nav>
+
+  <p *ngIf="this.username" class="greeting">Welcome: {{this.username}}!</p>
+
+  <!-- <h2>Hello, {{ users.name }}</h2> -->

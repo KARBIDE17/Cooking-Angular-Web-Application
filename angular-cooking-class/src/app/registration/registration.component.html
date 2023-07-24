@@ -1,0 +1,35 @@
+<h1 >Registration</h1>
+<div>
+<form  (ngSubmit)="register()">
+  
+  <div class="form-group">
+    <label class="registration-label">
+    Name:
+    <input placeholder="Enter your name" class="form-control" type="text" [(ngModel)]="user.userName" name="Name" required>
+  </label></div>
+  
+  <br>
+  <div class="form-group"><label class="registration-label">
+    Password:
+    <input placeholder="Enter your Password" type="password" [(ngModel)]="user.userPassword" name="password" required>
+  </label></div>
+  
+  <br>
+  <div class="form-group"><label class="registration-label">
+    Email:
+    <input placeholder="Enter your email address" type="email" [(ngModel)]="user.userEmail" name="email" required>
+  </label></div>
+ 
+  <br>  
+  <div class="form-group"><label class="registration-label">
+    Phone:
+    <input placeholder="Enter your phone number" type="text" [(ngModel)]="user.userPhone" name="userPhone" >
+  </label></div>
+
+  <br>
+
+  <button class="registration-button" type="submit">Register</button>
+  <p *ngIf="userMessage" class="error-message">{{ userMessage }}</p>
+</form>
+</div>
+

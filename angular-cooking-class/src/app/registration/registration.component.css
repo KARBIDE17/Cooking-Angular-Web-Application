@@ -1,0 +1,46 @@
+.registration-label {
+    color: #111111;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px; /* Increased font size */
+    font-weight: bold; /* Added font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+    margin-right: 200px ;
+}
+
+.registration-button {
+  padding: 5px 10px;
+  background-color: #50603d;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+  font-weight: bold; /* Added font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+.form-control {
+    flex-grow: 1; /* Allow the input to grow and fill the remaining space */
+  }
+
+  label {
+    width: 100px; /* Set a fixed width for labels */
+    margin-right: 10px;
+  }
+  
+
+
+ 
